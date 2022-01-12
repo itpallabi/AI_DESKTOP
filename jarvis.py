@@ -52,11 +52,11 @@ def takeCommand():
     return query
 
 def sendEmail(to,content):
-    server = smtplib.SMTP('pallabibehera33@gmail.com', 587)
+    server = smtplib.SMTP('youremail@gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('pallabibehera33@gmail.com','pallabi100')
-    server.sendmail('pallabibehera33@gmail.com',to, content)
+    server.login('youremail@gmail.com','your_password')
+    server.sendmail('youremail@gmail.com',to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -102,7 +102,7 @@ if __name__ == "__main__":
             try:
                 speak("what should I say?")
                 content = takeCommand()
-                to = "pallabibehera33@gmail.com"
+                to = "youremail@gmail.com"
                 sendEmail(to,content)
                 speak("Email has been sent!")
             except Exception as e:
